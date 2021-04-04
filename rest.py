@@ -1,5 +1,8 @@
+import datetime
+
 store = {"MCCHICKEN":45,"HAPPY MEAL":60,"MCVEGGIE":70,"MCFLURRY":625,"CHICKEN NUGGETS":420}
 bill = {}
+datetimenow = datetime.datetime.now()
 print("-"*30)#1st dotted line for menu
 print("Welcome to McDonalds!")
 print("-"*30)#2nd dotted line for menu
@@ -27,7 +30,10 @@ while user == "Y" or user == "y":
         print("Sorry, we don't have",a)#if store doesnt have that Item user entered.
         user = input("Do you want to Continue(Y/N):")
 print("-"*30)
-print("Here's your bill: ")
+print("            Bill")
+print("-"*30)
+print("Date: ",datetimenow.strftime("%x"))
+print("Time: ",datetimenow.strftime("%X"))
 print("-"*30)
 for y in bill.keys():
     print('{:10s}\t{:4.0f}'.format(y,bill[y]))
